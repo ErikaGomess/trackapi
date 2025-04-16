@@ -78,4 +78,16 @@ public class Usuario {
     public void setSetor(Setor setor) {
         this.setor = setor;
     }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", email='" + email + '\'' +
+                ", senha='" + senha + '\'' +
+                ", role='" + role + '\'' +
+                ", setor=" + setor +
+                '}';
+    }
 }

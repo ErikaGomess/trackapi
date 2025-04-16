@@ -45,4 +45,13 @@ public class Setor {
     public void setResponsavel(String responsavel) {
         this.responsavel = responsavel;
     }
+
+    @Override
+    public String toString() {
+        return "Setor{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", responsavel='" + responsavel + '\'' +
+                '}';
+    }
 }

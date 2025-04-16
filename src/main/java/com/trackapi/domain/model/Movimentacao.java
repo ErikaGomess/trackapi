@@ -9,8 +9,8 @@ public class Movimentacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String deSetor;
-    private String paraSetor;
+    private Setor deSetor;
+    private Setor paraSetor;
     private LocalDateTime dataHora;
     private String observacao;
 
@@ -20,7 +20,7 @@ public class Movimentacao {
 
     public Movimentacao() {}
 
-    public Movimentacao(Long id, String deSetor, String paraSetor, LocalDateTime dataHora, String observacao, Encomenda encomenda) {
+    public Movimentacao(Long id, Setor deSetor, Setor paraSetor, LocalDateTime dataHora, String observacao, Encomenda encomenda) {
         this.id = id;
         this.deSetor = deSetor;
         this.paraSetor = paraSetor;
@@ -39,19 +39,19 @@ public class Movimentacao {
         this.id = id;
     }
 
-    public String getDeSetor() {
+    public Setor getDeSetor() {
         return deSetor;
     }
 
-    public void setDeSetor(String deSetor) {
+    public void setDeSetor(Setor deSetor) {
         this.deSetor = deSetor;
     }
 
-    public String getParaSetor() {
+    public Setor getParaSetor() {
         return paraSetor;
     }
 
-    public void setParaSetor(String paraSetor) {
+    public void setParaSetor(Setor paraSetor) {
         this.paraSetor = paraSetor;
     }
 
