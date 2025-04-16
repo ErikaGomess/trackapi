@@ -1,4 +1,4 @@
-package com.trackapi.model;
+package com.trackapi.domain.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
