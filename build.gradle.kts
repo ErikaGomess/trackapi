@@ -38,11 +38,11 @@ configurations.all {
 	}
 }
 
-tasks.jar{
-	manifest{
-		attributes["Main-Class"] = "com.trackapi.Application"
-	}
+tasks.named<org.springframework.boot.gradle.tasks.bundling.BootJar>("bootJar") {
+	archiveFileName.set("app.jar") // nome usado no Procfile
 }
+
+
 
 tasks.withType<Test> {
 	useJUnitPlatform()

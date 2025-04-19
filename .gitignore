@@ -1,11 +1,33 @@
-HELP.md
-.gradle
+# ========================
+# Java / Gradle / Spring Boot
+# ========================
+.gradle/
 build/
 !gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### STS ###
+# Ignore jar gerado pelo Spring Boot
+*.jar
+
+# Logs e arquivos temporários
+*.log
+*.bak
+*.tmp
+
+# ========================
+# IDEs
+# ========================
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# VS Code
+.vscode/
+
+# Spring Tool Suite (STS)
 .apt_generated
 .classpath
 .factorypath
@@ -14,24 +36,14 @@ build/
 .springBeans
 .sts4-cache
 bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 
-### VS Code ###
-.vscode/
+# ========================
+# Maven (caso use em paralelo)
+/target/
