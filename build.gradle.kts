@@ -38,6 +38,12 @@ configurations.all {
 	}
 }
 
+tasks.jar{
+	manifest{
+		attributes["Main-Class"] = "com.trackapi.Application"
+	}
+}
+
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
