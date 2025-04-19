@@ -27,6 +27,17 @@ dependencies {
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
+// ✅ Forçar versão compatível do spring-web para evitar conflitos
+configurations.all {
+	resolutionStrategy {
+		eachDependency {
+			if (requested.group == "org.springframework" && requested.name.startsWith("spring-web")) {
+				useVersion("6.1.4")
+			}
+		}
+	}
+}
+
 tasks.withType<Test> {
 	useJUnitPlatform()
 }

@@ -1,9 +1,9 @@
 spring:
   datasource:
-    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    url: jdbc:postgresql://maglev.proxy.rlwy.net:30637/railway
     username: ${PGUSER}
     password: ${PGPASSWORD}
   jpa:
     open-in-view: false
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
