@@ -6,7 +6,7 @@ TrackAPI é uma API REST desenvolvida em Java com Spring Boot para gerenciar o r
 
 ## 🚀 Tecnologias Utilizadas
 
-- Java 24
+- Java 21
 - Spring Boot
 - Spring Web
 - Spring Data JPA
@@ -38,15 +38,22 @@ O diagrama abaixo representa a estrutura das classes principais da **TrackAPI**:
 ## 📁 Estrutura de Diretórios
 
 ```text
-src
-└── main
-    ├── java
-    │   └── com.trackapi
-    │       ├── controller
-    │       ├── model
-    │       ├── repository
-    │       ├── service
-    │       └── Application.java
-    └── resources
-        ├── application.properties
-        └── data.sql (opcional para seed inicial)
+│
+├── com.trackapi
+│   ├── controller
+│   │   ├── dto
+│   │   └── exception
+│   │
+│   ├── domain
+│   │   ├── model
+│   │   └── repository
+│   │
+│   ├── service
+│   │   ├── exception
+│   │   └── impl
+│   │
+│   └── Application.java
+│
+└── resources
+    ├── application-dev.yml
+    └── application-prd.yml

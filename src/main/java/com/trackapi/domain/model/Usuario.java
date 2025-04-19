@@ -2,7 +2,7 @@ package com.trackapi.domain.model;
 
 import jakarta.persistence.*;
 
-@Entity
+@Entity(name = "tb_usuario")
 public class Usuario {
 
     @Id

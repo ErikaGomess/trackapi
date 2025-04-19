@@ -3,14 +3,21 @@ package com.trackapi.domain.model;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
-@Entity
+@Entity(name = "tb_movimentacao")
 public class Movimentacao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "de_setor_id") // nome da coluna FK no banco
     private Setor deSetor;
+
+    @ManyToOne
+    @JoinColumn(name = "para_setor_id") // nome da coluna FK no banco
     private Setor paraSetor;
+
     private LocalDateTime dataHora;
     private String observacao;
 
@@ -28,8 +35,6 @@ public class Movimentacao {
         this.observacao = observacao;
         this.encomenda = encomenda;
     }
-
-    // Getters e setters
 
     public Long getId() {
         return id;
@@ -83,8 +88,11 @@ public class Movimentacao {
     public String toString() {
         return "Movimentacao{" +
                 "id=" + id +
-                ", deSetor='" + deSetor + '\'' +
-                ", paraSetor='" + paraSetor + '\'' +
+                ", deSetor=" + deSetor +
+                ", paraSetor=" + paraSetor +
+                ", dataHora=" + dataHora +
+                ", observacao='" + observacao + '\'' +
+                ", encomenda=" + encomenda +
                 '}';
     }
 }

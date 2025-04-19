@@ -2,13 +2,12 @@ package com.trackapi.domain.model;
 
 import jakarta.persistence.*;
 
-@Entity
+@Entity(name = "tb_setor")
 public class Setor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String nome;
     private String responsavel;
 

@@ -1,6 +1,6 @@
 package com.trackapi.controller.dto;
 
-import com.trackapi.domain.model.Setor;
+
 import com.trackapi.domain.model.Usuario;
 
 public record UsuarioDto(Long id, String nome, String email, String senha, String role, SetorDto setor) {
