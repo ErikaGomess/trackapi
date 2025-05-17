@@ -1,11 +1,10 @@
 {
-  "builds": [
-    {
-      "src": "build.gradle",
-      "use": "@railway/gradle",
-      "variables": {
-        "GRADLE_OPTS": "--no-daemon --no-build-cache"
-      }
+  "build": {
+    "builder": "gradle",
+    "baseImage": "eclipse-temurin:21-jdk",
+    "buildCommand": "./gradlew clean build --no-daemon -x test",
+    "variables": {
+      "GRADLE_OPTS": "--no-build-cache"
     }
-  ]
+  }
 }
