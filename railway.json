@@ -1,0 +1,7 @@
+{
+  "build": {
+    "builder": "gradle",
+    "buildCommand": "./gradlew clean build --no-daemon -x test",
+    "runCommand": "java -jar build/libs/app.jar"
+  }
+}
