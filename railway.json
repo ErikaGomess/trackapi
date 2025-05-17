@@ -1,7 +1,11 @@
 {
-  "build": {
-    "builder": "gradle",
-    "buildCommand": "./gradlew clean build --no-daemon -x test",
-    "runCommand": "java -jar build/libs/app.jar"
-  }
+  "builds": [
+    {
+      "src": "build.gradle",
+      "use": "@railway/gradle",
+      "variables": {
+        "GRADLE_OPTS": "--no-daemon --no-build-cache"
+      }
+    }
+  ]
 }
